@@ -1,0 +1,17 @@
+{
+    "name": "86130/q3",
+    "autoload": {
+        "psr-4": {
+            "86130\\Q3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cg025",
+            "email": "143975689+cg025@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
