@@ -11,8 +11,8 @@ $password = $_POST['password'];
 $remember = isset($_POST['remember']);
 
 // 假设用户的邮箱和密码是预定义的
-$valid_email = "S4099125@student.rmit.edu.au";
-$valid_password = "Gly980205.";
+$valid_email = "charleneguo7@gmail.com";
+$valid_password = "gly980205";
 
 if ($email == $valid_email && $password == $valid_password) {
     $verification_code = rand(100000, 999999); // 生成6位随机验证码
@@ -24,16 +24,16 @@ if ($email == $valid_email && $password == $valid_password) {
     try {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER; // 启用详细的SMTP调试输出
         $mail->isSMTP();
-        $mail->Host       = 'smtp.office365.com';
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'S4099125@student.rmit.edu.au';
-        $mail->Password   = 'Gly980205.'; // 请确认这个密码是正确的，并且不是应用密码
+        $mail->Username   = 'charleneguo7@gmail.com';
+        $mail->Password   = 'gly980205'; // 请确认这个密码是正确的，并且不是应用密码
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // 收件人设置
-        $mail->setFrom('S4099125@student.rmit.edu.au', 'Your Name'); // 发件人信息
-        $mail->addAddress($email); // 收件人地址（用户的邮箱）
+        $mail->setFrom('charleneguo7@gmail.com', 'Your Name'); // 发件人信息
+        $mail->addAddress('charleneguo7@gmail.com'); // 收件人地址（用户的邮箱）
 
         // 邮件内容设置
         $mail->isHTML(true); // 邮件格式为HTML
